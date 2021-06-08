@@ -3,7 +3,9 @@
   "description": "Simple app to take notes and save them",
   "main": "src/notes.js",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
     "http-server": "^0.12.3"
   }
 }
