@@ -38,12 +38,19 @@ As a programmer
 I can refresh the page and still see my notes
 So I can remember what I took down
 ```
-#makersNotes
+# makersNotes
 
-##How to run this project:
-First, you need to clone this repository in your Visual Code Studio
-Make sure you got Node and http-server installed.
-< inline code>
-Run in your terminal: "node node_modules/http-server/bin/http-server"
-Open in Chrome: http://localhost:8080/notes.html
-  
+## How to run this project:
+* First, you need to clone this repository in your Visual Code Studio
+* Make sure you got Node and http-server installed.
+
+    $ cd root/of/your-project/
+    $ npm install http-server --save-dev
+
+In your project, run:
+
+    $ cd root/of/your-project/
+    $ npm install http-server --save
+
+* Run in your terminal: "node node_modules/http-server/bin/http-server"
+* Open in Chrome: http://localhost:8080/notes.html
