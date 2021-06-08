@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Thermostat</title>
+    <title>Notes</title>
   </head>
   <script src="src/notes.js"></script>
 
   <body>
     <section>
-      <h1>"Hello World"</h1>
+      <form id="add-note">
+        <label>New note</label>
+        <input type="text" name="note" id="note">
+        <button type="submit">Add note</button>
+      </form>
+      
+      <ol id="notelist"></ol>
       
     </section>
   </body>
