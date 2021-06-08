@@ -1,4 +1,7 @@
 {
+  "name": "makersNotes",
+  "description": "Simple app to take notes and save them",
+  "main": "src/notes.js",
   "dependencies": {
     "express": "^4.17.1",
     "http-server": "^0.12.3"
