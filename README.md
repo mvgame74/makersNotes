@@ -38,9 +38,12 @@ As a programmer
 I can refresh the page and still see my notes
 So I can remember what I took down
 ```
+#makersNotes
 
-Check `LocalStorage` to learn about how to save data in your browser.
-
-Finally, why not deploy your app?
-
-Deploying static applications like this one (application with no server side logic) is simple, as it only needs a server to serve files. Look into [GitHub Pages](https://pages.github.com/) or [Surge](https://surge.sh/) to deploy this app.
+##How to run this project:
+First, you need to clone this repository in your Visual Code Studio
+Make sure you got Node and http-server installed.
+< inline code>
+Run in your terminal: "node node_modules/http-server/bin/http-server"
+Open in Chrome: http://localhost:8080/notes.html
+  
