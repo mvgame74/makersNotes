@@ -2,15 +2,21 @@
 <html>
   <head>
     <title>Notes</title>
+    <h1>NOTES</h1>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <script src="src/interface.js"></script>
-
+  <script src="src/notes.js"></script>
+  <script src="src/notebook.js"></script>
+  <script src="spec/notesSpec.js"></script>
   <body>
     <section>
       <form id="add-note">
-        <label>New note</label>
-        <input type="text" name="note" id="note">
-        <button type="submit">Add note</button>
+        <!-- <input type="text" name="note" id="note"> -->
+        <textarea id="note" name="note" rows="10" cols="50">
+        </textarea>
+        <br><br>
+          <button type="submit">Create</button>
       </form>
       
       <ol id="notelist"></ol>
