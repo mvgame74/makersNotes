@@ -15,9 +15,15 @@ class Notebook {
     // alert( note.text ); 
   }
 
-  showNotes(notelist) {
-    for (let i = 0; i < (this.notes).length; i++) {
-      
-    }
+  showNotePreview() {
+    return ((this.notes[(this.notes).length - 1]).note).substring(0, 20);
+  }
+
+  showNotes() {
+    return (this.notes[(this.notes).length - 1]).note;
+  }
+
+  showNotesLength() {
+    return (this.notes).length;
   }
 } 

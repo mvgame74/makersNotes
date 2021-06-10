@@ -8,11 +8,13 @@ var notebook = new Notebook();
 addToNotes.addEventListener('submit', (event) => {
   event.preventDefault();
   notebook.addNote(note.value);
-  notelist.innerHTML += ('<li><a href="#' + (notebook.notes).length + '">' + (notebook.notes[(notebook.notes).length - 1]).note + '</a></li>');
+  notelist.innerHTML += ('<li><a href="#' + notebook.showNotesLength() + '">' + notebook.showNotePreview() + '...</a></li>');
   note.value = '';
 })
 
-
+notelist.addEventListener('click', () => {
+ console.log(url)
+})
 
 // addToNotes.addEventListener('submit', event => {
 //   event.preventDefault();
