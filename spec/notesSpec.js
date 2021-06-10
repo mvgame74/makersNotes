@@ -38,3 +38,9 @@ it('Notebook can hold lots of notes', () => {
   }
   expect((notebook.notes).length).toEqual(10)
 }) 
+
+it('cannot submit an empty note', () => {
+  var notebook = new Notebook();
+  notebook.addNote('')
+  expect(((notebook.notes).length)).toEqual(0)
+})
