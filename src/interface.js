@@ -8,13 +8,17 @@ var notebook = new Notebook();
 addToNotes.addEventListener('submit', (event) => {
   event.preventDefault();
   notebook.addNote(note.value);
-  notelist.innerHTML += ('<li><a href="#' + notebook.showNotesLength() + '">' + notebook.showNotePreview() + '...</a></li>');
+  notelist.innerHTML += (`<li><a href=""><div id="${notebook.showNotesLength()}">${notebook.showNotePreview()}...</div></a></li>`);
   note.value = '';
 })
 
-notelist.addEventListener('click', () => {
- console.log(url)
+notelist.addEventListener('click', (event) => {
+  let id = (event.target.id) - 1
+  event.preventDefault();
+  console.log(notebook.showFullNoteByID(id))
 })
+
+
 
 // addToNotes.addEventListener('submit', event => {
 //   event.preventDefault();
