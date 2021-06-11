@@ -4,20 +4,26 @@ var addToNotes = document.querySelector('#add-note');
 var note = document.querySelector('#note');
 var notelist = document.querySelector('#notelist');
 var notebook = new Notebook();
+var noteChoice = document.querySelector('#noteChoice');
 
 addToNotes.addEventListener('submit', (event) => {
   event.preventDefault();
   notebook.addNote(note.value);
-  notelist.innerHTML += (`<li><a href=""><div id="${notebook.showNotesLength()}">${notebook.showNotePreview()}...</div></a></li>`);
+  notelist.innerHTML += ('<li><a href="#' + notebook.showNotesLength() + '">' + notebook.showNotePreview() + '...</a></li>');
   note.value = '';
 })
 
-notelist.addEventListener('click', (event) => {
+// notelist.addEventListener('click', (event) => {
+//   let id = (event.target.id) - 1
+//   event.preventDefault();
+//   console.log(notebook.showFullNoteByID(id))
+// })
+
+addToNotes.addEventListener('onclick', (event) => {
   let id = (event.target.id) - 1
   event.preventDefault();
-  console.log(notebook.showFullNoteByID(id))
+  noteChoice.innerHTML = ('<p>' + notebook.showFullNoteByID(id) + '</p>');
 })
-
 
 
 // addToNotes.addEventListener('submit', event => {
