@@ -19,7 +19,7 @@ addToNotes.addEventListener('submit', (event) => {
 //   console.log(notebook.showFullNoteByID(id))
 // })
 
-addToNotes.addEventListener('onclick', (event) => {
+noteChoice.EventListener('onclick', (event) => {
   let id = (event.target.id) - 1
   event.preventDefault();
   noteChoice.innerHTML = ('<p>' + notebook.showFullNoteByID(id) + '</p>');
