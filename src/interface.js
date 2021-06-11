@@ -4,8 +4,6 @@ var addToNotes = document.querySelector('#add-note');
 var note = document.querySelector('#note');
 var notelist = document.querySelector('#notelist');
 var notebook = new Notebook();
-let idd
-const getId = async () => {}
 
 addToNotes.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -15,8 +13,9 @@ addToNotes.addEventListener('submit', (event) => {
 })
 
 notelist.addEventListener('click', (event) => {
+  let id = (event.target.id) - 1
   event.preventDefault();
-  console.log(event.target.id)
+  console.log(notebook.showFullNoteByID(id))
 })
 
 

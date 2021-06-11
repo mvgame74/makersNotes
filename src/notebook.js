@@ -26,4 +26,8 @@ class Notebook {
   showNotesLength() {
     return (this.notes).length;
   }
+
+  showFullNoteByID(id) {
+    return this.notes[id].note
+  }
 } 
