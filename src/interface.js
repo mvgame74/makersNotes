@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
 var addToNotes = document.querySelector('#add-note');
 var note = document.querySelector('#note');
 var notelist = document.querySelector('#notelist');
+var modalContent = document.querySelector('#modal-content')
+var modal = document.querySelector("#myModal");
 var notebook = new Notebook();
 
 addToNotes.addEventListener('submit', (event) => {
@@ -13,12 +15,17 @@ addToNotes.addEventListener('submit', (event) => {
 })
 
 notelist.addEventListener('click', (event) => {
-  let id = (event.target.id) - 1
+  var id = (event.target.id - 1)
   event.preventDefault();
-  console.log(notebook.showFullNoteByID(id))
+  modalContent.innerText = notebook.showFullNoteByID(id)
+  modal.style.display = "block";
 })
 
-
+window.addEventListener('click', (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+})
 
 // addToNotes.addEventListener('submit', event => {
 //   event.preventDefault();
